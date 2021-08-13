@@ -17,13 +17,15 @@ body {
 }
 
 header {
-  margin-top: 16px;
-  margin-bottom: 48px;
+  margin: 2rem;
+  left: 50%;
+  
 }
 
 h2 {
-  font-size: 64px;
-  margin-bottom: 16px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 55px;
+  margin: 5rem 7.5rem;
 }
 
 
@@ -32,12 +34,11 @@ h2 {
   top: 50%;
   left: 50%;
   display: flex;
-  height: 300px;
+  height: 250px;
   width: 600px;
   transform: translate(-50%, -50%);
   flex-wrap: wrap;
-  cursor: pointer;
-  border-radius: 20px;
+  border-radius: 15px;
   box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
 }
 
@@ -47,13 +48,17 @@ h2 {
   width: 100%;
   justify-content: center;
   padding: 2rem;
-  background-color: #fafafa;
+  background-color: #32008a;
 }
 
 .weatherLocation button{
-  background: #080705;
-  color:#fff;
-  border: 1px solid transparent;
+  background: #ffffff;
+    color: #000;
+    border: 1px solid transparent;
+    margin: 0.5rem;
+    border-radius: 2px;
+    width: 5rem;
+    cursor: pointer;
 }
 .weatherLocation input:focus{
   outline: 0 none;
@@ -109,14 +114,15 @@ h2 {
 .widget .date {
   flex: 0 0 30%;
   height: 40%;
-  background: rgb(68, 112, 207);
+  background-color: #32008a;
   border-bottom-right-radius: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   color: white;
-  font-size: 30px;
-  font-weight: 800;
+  font-size: 25px;
+  font-weight: 700;
+  font-family: fantasy;
 }
 
 p {

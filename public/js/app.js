@@ -18,7 +18,7 @@ const dateElement = document.querySelector('.date');
 // creating array of months
 const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 // using VS code to get new date
-dateElement.textContent = new Date().getDate() + monthNames[new Date().getMonth()].substring(0, 3);
+dateElement.textContent = new Date().getDate() + "th, " + monthNames[new Date().getMonth()].substring(0, 3);
 
 weatherForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -40,7 +40,7 @@ weatherForm.addEventListener('submit', (event) => {
                     weatherIcon.className = "wi wi-day-cloudy"
                 }
                 locationElement.textContent = data.cityName;
-                tempElement.textContent = (data.temperature - 273.5).toFixed(2) + String.fromCharCode(176);
+                tempElement.textContent = (data.temperature - 273).toFixed(2) + String.fromCharCode(176);
                 weatherCondition.textContent = data.description.toUpperCase();
             }
         }) 

@@ -24,7 +24,7 @@ app.use(express.static(publicStaticDirPath));
 // setting up start and end points
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'Weather App'
+        title: '|Weather App|'
     })
 })
 
