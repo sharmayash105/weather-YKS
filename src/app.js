@@ -7,22 +7,21 @@ const path = require('path');
 const weatherData = require('../weather_main/weatherData');
 
 // To detect our port
-const port = process.env.PORT || 3000 ;
+const port = process.env.PORT || 3000
 
 // locating our local files
 const publicStaticDirPath = path.join(__dirname, '../public');
-// passing address of our local files to express
-app.use(express.static(publicStaticDirPath));
-
 
 // locating views and partial paths
 const viewsPath = path.join(__dirname, '../template/views');
-const partialsPath = path.join(__dirname, '../templates/partials');
+const partialsPath = path.join(__dirname, '../template/partials');
 // passing address of views and partial to express
 app.set('view engine', 'hbs');
-app.set('views', viewsPaths);
-hbs.registerPartial(partialPaths);
+app.set('views', viewsPath);
+hbs.registerPartial(partialsPath);
 
+// passing address of our local files to express
+app.use(express.static(publicStaticDirPath));
 
 // setting up start and end points
 app.get('', (req,res)=>{
